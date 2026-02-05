@@ -2,6 +2,8 @@
 
 A Laravel-based REST API that ingests conversation data and surfaces actionable conversion insights — similar to how platforms like Patient Prism transform call data into business metrics.
 
+![Conversation Insights Dashboard](Conversations.png)
+
 ## Features
 
 - **REST API** for conversation ingestion and retrieval
@@ -19,6 +21,8 @@ Healthcare and service businesses rely on understanding why leads convert or fai
 
 - Laravel 12
 - PHP 8.4
+- Vue.js 3 (Composition API)
+- Tailwind CSS 4
 - SQLite (development) / MySQL (production)
 - PHPUnit for testing
 
@@ -26,11 +30,12 @@ Healthcare and service businesses rely on understanding why leads convert or fai
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/ralphmoran/conversation-insights-api.git
 cd conversation-insights-api
 
 # Install dependencies
 composer install
+npm install
 
 # Copy environment file
 cp .env.example .env
@@ -40,6 +45,9 @@ php artisan key:generate
 
 # Run migrations
 php artisan migrate
+
+# Build frontend assets
+npm run build
 
 # (Optional) Seed demo data
 php artisan db:seed
